@@ -1,0 +1,13 @@
+# Copyright 2024 Morse Micro
+# SPDX-License-Identifier: Apache-2.0
+
+dependencies:
+    idf:
+        version: "==5.1.1"
+    mmutils:
+        version: "==2.6.4-esp32"
+        path: ../mmutils
+description: Morse Micro IP Abstraction Layer
+targets:
+    - esp32s3
+version: "2.6.4-esp32"
