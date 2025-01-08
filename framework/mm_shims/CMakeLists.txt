@@ -15,7 +15,10 @@ idf_component_register(INCLUDE_DIRS ${inc}
 target_link_libraries(${COMPONENT_TARGET} PRIVATE "${CMAKE_CURRENT_LIST_DIR}/mm6108.mbin.o")
 
 # Kconfig variables are used to determine which bcf file to link against
-if(CONFIG_MM_BCF_MF08651_US)
+if(CONFIG_MM_BCF_MF16858_US)
+    message(STATUS "Using BCF for MM6108_MF16858_US")
+    target_link_libraries(${COMPONENT_TARGET} PRIVATE "${CMAKE_CURRENT_LIST_DIR}/bcf_mf16858_us.mbin.o")
+elseif(CONFIG_MM_BCF_MF08651_US)
     message(STATUS "Using BCF for MM6108_MF08651_US")
     target_link_libraries(${COMPONENT_TARGET} PRIVATE "${CMAKE_CURRENT_LIST_DIR}/bcf_mf08651_us.mbin.o")
 elseif(CONFIG_MM_BCF_MF08551)
