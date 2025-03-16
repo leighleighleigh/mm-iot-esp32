@@ -3,7 +3,7 @@
 
 dependencies:
     idf:
-        version: "==5.1.1"
+        version: ">=5.1.1"
 description: Morse Micro Packet Memory
 targets:
     - esp32s3
